@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/github-samples/pets-workshop git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-coral-weasel.sh
-        container: qc.acc_seedy-firebrick-mouse
+        - /usr/bin/env sh .sqa/script.smelly-olive-turtle.sh
+        container: qc.acc_skimpy-silver-orangutan
   QC.Doc:
     repos:
       github.com/github-samples/pets-workshop find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-cerulean-turkey.sh
-        container: qc.doc_scanty-cerulean-zorse
+        - /usr/bin/env sh .sqa/script.flaky-ochre-budgerigar.sh
+        container: qc.doc_cloudy-linen-wildebeest
       github.com/github-samples/pets-workshop git:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-harlequin-squirrel.sh
-        container: qc.doc_grumpy-green-chameleon
+        - /usr/bin/env sh .sqa/script.clammy-copper-forest.sh
+        container: qc.doc_slaphappy-purple-cuscus
       github.com/github-samples/pets-workshop markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-zucchini-okapi.sh
-        container: qc.doc_surly-zucchini-worm
+        - /usr/bin/env sh .sqa/script.queasy-goldenrod-crab.sh
+        container: qc.doc_geeky-cyan-indri
   QC.Lic:
     repos:
       github.com/github-samples/pets-workshop licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-cyan-booby.sh
-        container: qc.lic_crappy-coral-macaw
+        - /usr/bin/env sh .sqa/script.homely-zucchini-dogfish.sh
+        container: qc.lic_cheeky-asparagus-chinook
   QC.Sec:
     repos:
       github.com/github-samples/pets-workshop bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-khaki-havanese.sh
-        container: qc.sec_frumpy-azure-heron
+        - /usr/bin/env sh .sqa/script.boozy-grey-jellyfish.sh
+        container: qc.sec_queasy-myrtle-wolfhound
   QC.Sty:
     repos:
       github.com/github-samples/pets-workshop flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-maroon-bat.sh
-        container: qc.sty_craggy-champagne-fowl
+        - /usr/bin/env sh .sqa/script.pasty-violet-newt.sh
+        container: qc.sty_crappy-fuchsia-camel
       github.com/github-samples/pets-workshop hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-celadon-clam.sh
-        container: qc.sty_boozy-aquamarine-opossum
+        - /usr/bin/env sh .sqa/script.bluesy-puce-moth.sh
+        container: qc.sty_grumpy-malachite-rottweiler
       github.com/github-samples/pets-workshop jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-buff-chinook.sh
-        container: qc.sty_bumpy-cream-gharial
+        - /usr/bin/env sh .sqa/script.paltry-auburn-whippet.sh
+        container: qc.sty_gimpy-scarlet-beaver
   QC.Uni:
     repos:
       github.com/github-samples/pets-workshop pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-teal-whale.sh
-        container: qc.uni_foggy-jade-nightingale
+        - /usr/bin/env sh .sqa/script.cloudy-viridian-cichlid.sh
+        container: qc.uni_craggy-pear-manatee
   QC.Ver:
     repos:
       github.com/github-samples/pets-workshop get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-jade-deer.sh
-        container: qc.ver_baggy-myrtle-ray
+        - /usr/bin/env sh .sqa/script.homey-lavender-seal.sh
+        container: qc.ver_skinny-taupe-sheepdog
 timeout: 5400
