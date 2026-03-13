@@ -1,0 +1,72 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/pynblint
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/github-samples/pets-workshop:
+      branch: main
+      repo: https://github.com/github-samples/pets-workshop
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/github-samples/pets-workshop git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-gamboge-fly.sh
+        container: qc.acc_gamy-chestnut-cuttlefish
+  QC.Doc:
+    repos:
+      github.com/github-samples/pets-workshop find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-xanthic-husky.sh
+        container: qc.doc_muzzy-mauve-hummingbird
+      github.com/github-samples/pets-workshop git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-corn-serval.sh
+        container: qc.doc_cranky-pear-malamute
+      github.com/github-samples/pets-workshop markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-goldenrod-zebra.sh
+        container: qc.doc_lanky-teal-rat
+  QC.Lic:
+    repos:
+      github.com/github-samples/pets-workshop licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-flax-turkey.sh
+        container: qc.lic_stinky-emerald-worm
+  QC.Sec:
+    repos:
+      github.com/github-samples/pets-workshop bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-red-mole.sh
+        container: qc.sec_fuzzy-emerald-gecko
+  QC.Sty:
+    repos:
+      github.com/github-samples/pets-workshop flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-malachite-molly.sh
+        container: qc.sty_smelly-lavender-retriever
+      github.com/github-samples/pets-workshop hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-harlequin-hedgehog.sh
+        container: qc.sty_woozy-viridian-albatross
+      github.com/github-samples/pets-workshop jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-chartreuse-echidna.sh
+        container: qc.sty_scummy-tomato-bison
+  QC.Uni:
+    repos:
+      github.com/github-samples/pets-workshop pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-gold-deer.sh
+        container: qc.uni_snazzy-auburn-meerkat
+  QC.Ver:
+    repos:
+      github.com/github-samples/pets-workshop get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.cheeky-cornflower-chinook.sh
+        container: qc.ver_foggy-peach-crane
+timeout: 5400
